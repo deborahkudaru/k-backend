@@ -17,7 +17,7 @@ const book = async (req, res) => {
     from: email, 
     to: "quanimagery@gmail.com", 
     subject: `Quan Imagery Booking`, 
-    text:  `stuff`,
+    text:  `<h3>${name}</h3> <p>Phone No: ${phoneNumber}</p> <p>Address: ${address}</p><p>Address: ${sessionType}</p><p>Address: ${date}</p><p>Address: ${time}</p>`,
   };
 
   transporter
