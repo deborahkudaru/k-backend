@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer")
 
 const book = async (req, res) => {
 
-  const { name, email, phoneNumber, address, sessionType, date, time } = req.body;
+  const { email, name, phoneNumber, address, sessionType, date, time } = req.body;
   let config = {
     service: "gmail", 
     auth: {
@@ -17,7 +17,7 @@ const book = async (req, res) => {
     from: email, 
     to: "quanimagery@gmail.com", 
     subject: `Quan Imagery Booking`, 
-    text:  `<h3>${name}</h3> <p>Phone No: ${phoneNumber}</p> <p>Address: ${address}</p><p>Address: ${sessionType}</p><p>Address: ${date}</p><p>Address: ${time}</p>`,
+    text:  `Name: ${name} /nPhone No: ${phoneNumber} /nEmail: ${email} /nAddress: ${address} /nSession Type: ${sessionType} /nDate: ${date} /nTime: ${time}</p>`,
   };
 
   transporter
