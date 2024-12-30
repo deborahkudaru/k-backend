@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer")
 
 const book = async (req, res) => {
 
-  const { email, sendMessage } = req.body;
+  const { name, email, phoneNumber, address, sessionType, date, time } = req.body;
   let config = {
     service: "gmail", 
     auth: {
